@@ -56,11 +56,6 @@ Branch：develop
 4. 處理相關資料 需呼叫 3009 筆 因為該 api 是抓 index 所以呼叫 3010 會多一筆故需呼叫 results=3009 每頁 30 筆，故在點選頁面時必須先將資料切分，該 pageItem 所需顯示範圍，技術我採用 Filter 後將檔案丟進 pageItem 這個變數，當我點選時會將內容物清空放入新的範圍內容物
 5. Dialog 畫面的規劃，由於原先想說做一個隨便的 Dialog ，但又想到得到的資料是 User 資料，所以想說做個對話框，讓此次專案 看起來就像是聊天工具。
 
-## 額外發想
-
-1. 可用 localStorage 去記錄使用者操作習慣(例如可記憶他喜歡看什麼風格)
-2. 目前已將 數量訂定為變數，固可讓使用者呼叫想要的數量而非固定的 3009，也可定義各種 API 參數提供呼叫，例如想要的參數 name,email
-
 ## Events
 
 | Name               |  Input  | Output/Variables | Description                         |
@@ -93,3 +88,7 @@ Branch：develop
 | ID                | Output |            Description            |
 | ----------------- | :----: | :-------------------------------: |
 | update:modelValue | Number | The current page has been updated |
+## 額外發想
+
+1. 可用 localStorage 去記錄使用者操作習慣(例如可記憶他喜歡看什麼風格)
+2. 目前已將 數量訂定為變數，固可讓使用者呼叫想要的數量而非固定的 3009，也可定義各種 API 參數提供呼叫，例如想要的參數 name,email
