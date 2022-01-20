@@ -30,6 +30,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # 專案說明
 
+檔案路徑
+https://github.com/TzuChuanNien/Vue
+Branch：develop
+
 ## 採用技術、套件
 
 本次使用 Tailwind、Vue3 Composition、Axios、Heroicons、Vue 3 Pagination
@@ -56,3 +60,36 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 1. 可用 localStorage 去記錄使用者操作習慣(例如可記憶他喜歡看什麼風格)
 2. 目前已將 數量訂定為變數，固可讓使用者呼叫想要的數量而非固定的 3009，也可定義各種 API 參數提供呼叫，例如想要的參數 name,email
+
+## Events
+
+| Name               |  Input  | Output/Variables | Description                         |
+| ------------------ | :-----: | :--------------: | ----------------------------------- |
+| getRandomUserAsync |   Int   |     userData     | 輸入所需抓取檔案數量                |
+| page               |   Int   |     pageItem     | 計算該分頁所需顯示範圍              |
+| toggleModal        | boolean |      Dialog      | 判斷是否點選外部區域，以關閉 Dialog |
+
+## Variables Description
+
+| Name        |  Type  |   Description    |
+| ----------- | :----: | :--------------: |
+| userList    | Object |  所有使用者資料  |
+| pageItem    | Object | 該分頁使用者資料 |
+| currentPage | Number |   當前所在頁面   |
+| totalPage   | Number |      總頁數      |
+
+## vue3-pagination Description
+
+| ID              |  Type  | Default |               Description               |
+| --------------- | :----: | :-----: | :-------------------------------------: |
+| pages           | Number |         |          Total number of pages          |
+| rangeSize       | Number |    1    | Number of page around the current page  |
+| activeColor     | String | #DCEDFF |  Background color of the current page   |
+| hideFirstButton | String |  false  | Hide the button to go to the first page |
+| hideLastButton  | String |  false  | Hide the button to go to the last page  |
+
+## vue3-pagination Events
+
+| ID                | Output |            Description            |
+| ----------------- | :----: | :-------------------------------: |
+| update:modelValue | Number | The current page has been updated |
