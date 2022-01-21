@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-export default function createRequest() {
+export default function createRequest(baseURL) {
   const request = axios.create({
-    baseURL: "https://randomuser.me/",
+    baseURL: baseURL,
   });
 
 
